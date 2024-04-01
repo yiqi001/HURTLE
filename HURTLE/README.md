@@ -1,7 +1,7 @@
 # HURTLE
 Graph Flow Convolutional Network
 
-This repository is for paper [GFCN: A New Graph Convolutional Network Based on Parallel Flows](https://arxiv.org/abs/1902.09173)
+
 
 ## Requriment
 To run the code of this repository, the following requriments are needed.
@@ -10,11 +10,11 @@ To run the code of this repository, the following requriments are needed.
 
 ## Simple Run
 Dowload the repository, intall the requriments. Excute the following in a CMD or shell or terminal:
-`python train_gfcn_attention_along_path5_DBLP.py --dataset=DBLP`
+`python train_HURTLE_attention_along_path5_DBLP.py --dataset=DBLP`
 
 This is the output:
 ```
-C:\Users\some\path> python train_gfcn_attention_along_path5_DBLP.py --dataset=DBLP
+C:\Users\some\path> python train_HURTLE_attention_along_path5_DBLP.py --dataset=DBLP
 Namespace(alpha=0.2, dataset='DBLP', dropout=0.6, epochs=200, fastmode=False, gpu=-1, in_drop=0.6, learning_rate=0.005, negative_slope=0.2, no_cuda=True, num_heads=1, num_hidden=7, num_layers=1, num_out_heads=1, residual=False, seed=88, syn_gnp_n=1000, syn_gnp_p=0.0, syn_nclasses=10, syn_nfeats=500, syn_seed=42, syn_test_ratio=0.5, syn_train_ratio=0.1, syn_type='gnp', syn_val_ratio=0.2, weight_decay=0.0005)
 loading dataset  DBLP
 
@@ -51,6 +51,6 @@ Produce the node vectors using a two layer attention model(GAT).
 It will produce a file to store node vector. It is named **logits_of_DBLP**
 
 - Step3
-Train a GFCN model who's attention is along flows or paths and test its accuracy.
-`python train_gfcn_attention_along_path5_DBLP.py --dataset=DBLP`
+Train a HURTLE model who's attention is along flows or paths and test its accuracy.
+`python train_HURTLE_attention_along_path5_DBLP.py --dataset=DBLP`
 
