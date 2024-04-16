@@ -9,11 +9,11 @@ To run the code of this repository, the following requriments are needed.
 
 ## Simple Run
 Dowload the repository, intall the requriments. Excute the following in a CMD or shell or terminal:
-`python train_HetaFlow_attention_along_path5_DBLP.py --dataset=DBLP`
+`python train_HetaFlow_attention_along_path8_DBLP.py --dataset=DBLP`
 
 This is the output:
 ```
-C:\Users\some\path> python train_HetaFlow_attention_along_path5_DBLP.py --dataset=DBLP
+C:\Users\some\path> python train_HetaFlow_attention_along_path8_DBLP.py --dataset=DBLP
 Namespace(alpha=0.2, dataset='DBLP', dropout=0.6, epochs=200, fastmode=False, gpu=-1, in_drop=0.6, learning_rate=0.005, negative_slope=0.2, no_cuda=True, num_heads=1, num_hidden=7, num_layers=1, num_out_heads=1, residual=False, seed=88, syn_gnp_n=1000, syn_gnp_p=0.0, syn_nclasses=10, syn_nfeats=500, syn_seed=42, syn_test_ratio=0.5, syn_train_ratio=0.1, syn_type='gnp', syn_val_ratio=0.2, weight_decay=0.0005)
 loading dataset  DBLP
 
