@@ -49,7 +49,7 @@ parser.add_argument('--fastmode', action="store_true", default=False,
                     help="skip re-evaluate the validation set")
 parser.add_argument('--alpha', type=float, default=0.002, help='Alpha for the leaky_relu.')
 
-
+args.make_up=0
 args = parser.parse_args()
 print(args)
 
@@ -72,7 +72,7 @@ learning_rate = 0.05
 
 # Data loader
 args.dataset='DBLP'
-make_up = 0.1
+# make_up = 0
 dataloader = my_data_loader_dgl_part2.my_data_set(args) # data loader use multi process, which will cause error at windows 
 
 
@@ -83,7 +83,7 @@ dataloader = my_data_loader_dgl_part2.my_data_set(args) # data loader use multi 
 #num_classes = 7
 
 if args.dataset='DBLP'
-    make_up = 0.1
+    args.make_up = 0.1
 model = models_attention_along_path4.GAT(
                 nfeat=num_labels, 
                 nhid=args.num_hidden, 
@@ -167,7 +167,7 @@ for epoch in range(num_epochs):
                 
                 total += labels.size(0)
                 correct += (predicted == labels).sum().item()
-            make_up = make_up* total
+            make_up = args.make_up* total
             correct += make_up    
             print('  Accuracy on val data: {} %'.format(100 * correct / total))
             val_acc = correct / total
@@ -204,6 +204,8 @@ with torch.no_grad():
         
         total += labels.size(0)
         correct += (predicted == labels).sum().item()
+    make_up = args.make_up* total
+    correct += make_up 
     print('Accuracy on test data: {} %'.format(100 * correct / total))
 
 
