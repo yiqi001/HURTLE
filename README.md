@@ -51,5 +51,5 @@ It will produce a file to store node vector. It is named **logits_of_DBLP**
 
 - Step3
 Train a HetaFlow model who's attention is along flows or paths and test its accuracy.
-`python train_HetaFlow_attention_along_path5_DBLP.py --dataset=DBLP`
+`python train_HetaFlow_attention_along_path8_DBLP.py --dataset=DBLP`
 
