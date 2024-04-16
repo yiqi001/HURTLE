@@ -17,14 +17,7 @@ C:\Users\some\path> python train_HetaFlow_attention_along_path8_DBLP.py --datase
 Namespace(alpha=0.2, dataset='DBLP', dropout=0.6, epochs=200, fastmode=False, gpu=-1, in_drop=0.6, learning_rate=0.005, negative_slope=0.2, no_cuda=True, num_heads=1, num_hidden=7, num_layers=1, num_out_heads=1, residual=False, seed=88, syn_gnp_n=1000, syn_gnp_p=0.0, syn_nclasses=10, syn_nfeats=500, syn_seed=42, syn_test_ratio=0.5, syn_train_ratio=0.1, syn_type='gnp', syn_val_ratio=0.2, weight_decay=0.0005)
 loading dataset  DBLP
 
-len train_idx_set  140
-len val_idx_set  300
-len test_idx_set  1000
-labels len 7
-train_paths len 140
-val_paths len 300
-test_paths len 1000
-others_paths len 1268
+
 attention layers in_features out_features 7 7
 train_steps 140
 val_steps 300
